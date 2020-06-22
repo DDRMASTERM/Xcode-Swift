@@ -1,0 +1,4 @@
+var empStrArr = [String]()
+print(empStrArr)
+var sixInts = Array(repeating: 42, count: 6)
+print(sixInts)

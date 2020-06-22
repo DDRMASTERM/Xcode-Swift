@@ -1,0 +1,16 @@
+import Foundation
+
+var s="Hello_World"
+
+let range = s.index(s.endIndex, offsetBy: -6) ..< s.endIndex
+print(s[range])
+s.removeSubrange(range)
+print(s)
+print(s[s.index(s.endIndex, offsetBy: -2)])
+var y=s[s.index(s.endIndex, offsetBy: -1)]
+print(y)
+var str="one two three"
+var ss=str.suffix(5)
+print(ss)
+str.removeSubrange(str.startIndex ..< str.index(str.startIndex, offsetBy: 4))
+print(str)

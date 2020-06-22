@@ -1,0 +1,63 @@
+import Foundation
+
+var n1=0.0
+var n2=0.0
+var result=0.0
+var choice=""
+var input=""
+var t : Double?=0.0
+var valC=false
+while valC==false{
+    print("Enter a number: ")
+    input=readLine()!
+    if Double(input)==nil{
+        print("Invalid entry")
+    }
+    else{
+        n1=Double(input)!
+        valC=true
+    }
+
+}
+valC=false
+while valC==false{
+    print("Enter a number: ")
+    input=readLine()!
+    if Double(input)==nil{
+        print("Invalid entry")
+    }
+    else{
+        n2=Double(input)!
+        valC=true
+    }
+}
+valC=false
+while valC==false{
+    print("Enter an operation: ")
+    input=readLine()!
+    switch input{
+        case "-":
+           result=n1-n2
+           valC=true
+        case "+":
+           result=n1+n2
+           valC=true
+        case "*":
+           result=n1*n2
+           valC=true
+        case "/":
+           result=n1/n2
+           valC=true
+        case "%":
+           result=n1.truncatingRemainder(dividingBy: n2)
+           valC=true
+        default:
+            print("Invalid entry")
+    }
+}
+if result.truncatingRemainder(dividingBy: 1.0)==0{
+    print(Int(result))
+}
+else{
+    print(result)
+}
